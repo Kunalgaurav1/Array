@@ -111,7 +111,7 @@ int main(){
 
 using namespace std;
 
-void reverseString(char input[]){
+int length(char input[]){
 
     int count =0;
 
@@ -119,8 +119,16 @@ void reverseString(char input[]){
         count ++;
     }
 
+    return count;
+
+}
+
+void reverseString(char input[]){
+
+    int len = length(input);
+
     int startIndex = 0; 
-    int endIndex = count-1;
+    int endIndex = len-1;
 
     while(startIndex < endIndex){
          int temp = input[startIndex];
