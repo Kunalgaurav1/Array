@@ -46,7 +46,9 @@ int main(){
 }
 */
 
+//char Array palindrome
 
+/*
 #include<iostream>
 
 using namespace std;
@@ -81,6 +83,69 @@ int main(){
 
    cout << ans << endl;
 
+
+    return 0;
+}
+
+*/
+
+// using getline function
+/*
+
+#include<iostream>
+using namespace std;
+
+int main(){
+
+    char input[100];
+
+    cin.getline(input,100, 'l');
+    cout << input << endl;
+
+    
+    return 0;
+}
+*/
+
+#include<iostream>
+
+using namespace std;
+
+void reverseString(char input[]){
+
+    int count =0;
+
+    for(int i=0; input[i] != '\0'; i++){
+        count ++;
+    }
+
+    int startIndex = 0; 
+    int endIndex = count-1;
+
+    while(startIndex < endIndex){
+         int temp = input[startIndex];
+         input[startIndex] = input[endIndex];
+         input[endIndex] = temp;
+
+         startIndex++;
+         endIndex--;
+
+    }
+
+}
+
+int main(){
+
+    char input[100];
+    cin.getline(input, 100);
+
+    reverseString(input);
+
+    for(int i=0; input[i] != '\0'; i++){
+        cout << input[i]  ;
+    }
+
+    cout << endl;
 
     return 0;
 }
