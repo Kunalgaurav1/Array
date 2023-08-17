@@ -17,6 +17,8 @@ int main(){
 }
 */
 
+// length of charArray
+/*
 
 #include<iostream>
 
@@ -42,4 +44,43 @@ int main(){
     cout << ans << endl;
     return 0;
 }
+*/
 
+
+#include<iostream>
+
+using namespace std;
+
+bool checkPalindrome(char str[]) {
+    // Write your code here
+    int count =0;
+    for(int i=0; str[i] != '\0'; i++){
+        count ++;
+    }
+
+    int startIndex = 0; 
+    int endIndex = count;
+
+    while(startIndex<endIndex){
+        if(str[startIndex] != str[endIndex]){
+            return 0;
+        }
+
+        startIndex++;
+        endIndex--;
+    }
+
+    return 1;
+}
+
+int main(){
+    char str[100];
+    cin >> str;
+
+   int ans =  checkPalindrome(str);
+
+   cout << ans << endl;
+
+
+    return 0;
+}
